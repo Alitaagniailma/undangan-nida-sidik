@@ -18,9 +18,11 @@ assets/        -> foto dan musik
 1. **Rekening gift**: buka `script.js`, isi `nomor` dan `atasNama` pada BRI dan Mandiri di bagian `gift`.
    Selama nomor kosong, kartu menampilkan "Nomor rekening menyusul". Tombol "Salin Nomor" muncul otomatis.
 2. **Link Google Maps**: sudah terisi dari QR di undangan kertas. Coba buka sekali untuk memastikan lokasinya benar.
-3. **Musik** (opsional): taruh `musik.mp3` di folder `assets/`. Tanpa file ini, tombol musik otomatis hilang.
-4. **Foto galeri** (opsional): taruh `galeri-1.jpg` sampai `galeri-4.jpg` di `assets/` (rasio 3:4, sekitar 200-300 KB).
-   Selama belum ada, bagian galeri tidak tampil.
+3. **Musik**: `assets/musik.mp3` sekarang berisi loop gamelan sederhana buatan sendiri (sebagai contoh).
+   Untuk lagu pilihan mempelai, timpa file itu dengan nama yang sama. Pakai musik bebas hak cipta
+   karena undangan ini publik. Jika file dihapus, tombol musik otomatis hilang.
+4. **Foto galeri**: taruh `galeri-1.jpg` sampai `galeri-4.jpg` di `assets/` (rasio 3:4, sekitar 200-300 KB).
+   Selama belum ada, tampil bingkai kosong bertuliskan "Foto".
 
 Foto mempelai ada di `assets/foto-sidik.png` dan `assets/foto-nida.png` (PNG transparan).
 Untuk menggantinya, simpan PNG transparan dengan nama yang sama lalu timpa file-nya.
@@ -33,7 +35,7 @@ Untuk menggantinya, simpan PNG transparan dengan nama yang sama lalu timpa file-
 
 ## Mengubah data
 
-Nama, orang tua, alamat, jam akad/resepsi, dan daftar "Turut Mengundang" diedit langsung di `index.html`.
+Nama, orang tua, alamat, dan jam akad/resepsi diedit langsung di `index.html`.
 Waktu hitung mundur ada di `script.js` (`tanggalHitungMundur`).
 
 ## Nama tamu otomatis

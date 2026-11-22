@@ -150,12 +150,7 @@ section, footer { position: relative; overflow: hidden; padding: 80px 24px 96px;
   text-align: center;
 }
 .foto-wrap { position: relative; display: flex; justify-content: center; }
-.foto-wrap img { position: relative; z-index: 1; height: clamp(250px, 44dvh, 440px); width: auto; max-width: 74vw; object-fit: contain; }
-.latar-gunungan {
-  position: absolute; z-index: 0; left: 50%; top: 50%;
-  height: 128%; width: auto; aspect-ratio: 1 / 2;
-  transform: translate(-50%, -50%); opacity: .16; pointer-events: none;
-}
+.foto-wrap img { position: relative; z-index: 1; height: clamp(320px, 56dvh, 560px); width: auto; max-width: 84vw; object-fit: contain; }
 .foto-wrap.kosong { width: min(60vw, 250px); aspect-ratio: 3 / 4; }
 .foto-wrap.kosong::after {
   content: "Foto"; position: absolute; inset: 8%; z-index: 1;
@@ -184,16 +179,13 @@ section, footer { position: relative; overflow: hidden; padding: 80px 24px 96px;
 .tempat-judul { font-family: var(--font-judul); font-weight: 500; letter-spacing: .06em; font-size: 1em; margin-top: 4px; }
 .tempat-alamat { margin-top: 4px; }
 
-/* ---------- Turut mengundang ---------- */
-.daftar-undang { list-style: none; counter-reset: u; text-align: left; display: inline-block; margin-top: 4px; }
-.daftar-undang li { counter-increment: u; padding-left: 1.7em; position: relative; margin: 6px 0; }
-.daftar-undang li::before { content: counter(u) "."; position: absolute; left: 0; font-weight: 600; }
-
 /* ---------- Galeri ---------- */
 .galeri-grid { max-width: 760px; margin: 30px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; position: relative; z-index: 1; }
 .g-item { position: relative; aspect-ratio: 3 / 4; overflow: hidden; border: 1px solid var(--line); padding: 6px; }
 .g-item:nth-child(even) { margin-top: 24px; }
 .g-item img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
+.g-item.kosong { background: repeating-linear-gradient(45deg, rgba(128, 128, 128, .14) 0 10px, transparent 10px 20px); }
+.g-item.kosong::after { content: "Foto"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: var(--font-judul); letter-spacing: .3em; font-size: 13px; opacity: .55; }
 
 /* ---------- Gift ---------- */
 .gift-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 24px auto 0; max-width: 560px; }
@@ -229,7 +221,7 @@ section, footer { position: relative; overflow: hidden; padding: 80px 24px 96px;
   .mempelai { padding: 90px 40px 120px; }
   .mempelai-grid { grid-template-columns: 1fr 1fr; gap: 60px; text-align: left; justify-items: stretch; }
   .mempelai-grid .foto-wrap { justify-self: center; }
-  .foto-wrap img { height: clamp(300px, 56dvh, 500px); }
+  .foto-wrap img { height: clamp(380px, 70dvh, 620px); }
   .mempelai .pembatas { margin-left: 0; }
   .mempelai .ortu { max-width: 440px; }
   /* wanita: teks di kiri, foto di kanan */

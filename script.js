@@ -110,18 +110,12 @@ const CONFIG = {
     else img.addEventListener("error", tandai, { once: true });
   });
 
-  // --- Galeri: foto yang belum ada dibuang; jika semua kosong, seluruh bagian galeri hilang ---
-  (function galeri() {
-    const sec = $(".galeri");
-    if (!sec) return;
-    const cek = () => { if (!sec.querySelector(".g-item")) sec.remove(); };
-    sec.querySelectorAll("img[data-galeri]").forEach((img) => {
-      const buang = () => { const w = img.closest(".g-item"); if (w) w.remove(); cek(); };
-      if (img.complete && img.naturalWidth === 0) buang();
-      else img.addEventListener("error", buang, { once: true });
-    });
-    cek();
-  })();
+  // --- Galeri: foto yang belum ada tampil sebagai bingkai kosong bertuliskan "Foto" ---
+  document.querySelectorAll("img[data-galeri]").forEach((img) => {
+    const tandai = () => { img.parentElement.classList.add("kosong"); img.remove(); };
+    if (img.complete && img.naturalWidth === 0) tandai();
+    else img.addEventListener("error", tandai, { once: true });
+  });
 
   // --- Buka undangan + musik ---
   const audio = $("#musik");
